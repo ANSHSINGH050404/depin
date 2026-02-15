@@ -43,6 +43,9 @@ app.get("/api/v1/websites", authMiddleware, async (req, res) => {
       userId,
       disabled: false,
     },
+    include: {
+      ticks: true,
+    }
   });
 
   res.json({
