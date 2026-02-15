@@ -28,6 +28,7 @@ model Website {
 
 }
 
+
 model Validator {
   id        String      @id         @default(uuid())
   publicKey String
