@@ -21,10 +21,11 @@ model User {
 }
 
 model Website {
-  id      String   @id      @default(uuid())
-  url     String  
-  userId  String
-  ticks   websiteTick[]
+  id       String   @id      @default(uuid())
+  url      String  
+  userId   String
+  ticks    websiteTick[]
+  disabled Boolean   @default(false)
 
 }
 
