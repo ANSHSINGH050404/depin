@@ -8,11 +8,15 @@ app.get("/api/v1/website", authMiddleware, (req, res) => {
   const userId = req.userId!;
   const url = req.query.url;
 
-  prismaClient.website.create({
+  const data = prismaClient.website.create({
     data: {
       userId,
       url,
     },
+  });
+
+  res.json({
+    id: data.id,
   });
 });
 
